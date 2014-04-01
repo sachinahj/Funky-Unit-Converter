@@ -17,7 +17,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    int x = 5;
+    int y = 20;
+    int z = -2;
+    
+    //operators include: + - * /
+    
+    int additonAnswer = x + y;
+    int multiplicationAnswer= y * z;
+    
+    float heightOfEverstBaseCamp = 16900.3;
+    float heighoOfEverst = 29029;
+    
+    float distanceToTravel = heighoOfEverst - heightOfEverstBaseCamp;
+    distanceToTravel = distanceToTravel - 1000;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +41,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)convertUnits:(UIButton *)sender
+{
+    float numberOfBills = [self.numberOfBillsTextField.text floatValue];
+    float numberOfFootballFields = numberOfBills/91440;
+    self.numberOfBillsLabel.text = [NSString stringWithFormat:@"%f",numberOfFootballFields];
+    [self.numberOfBillsTextField resignFirstResponder];
+    
+
+}
 @end
